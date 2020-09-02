@@ -10,14 +10,15 @@ class App extends Component {
         monsters:[],
         searchField: ''
     }
-  
   }
-
-  componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => this.setState({monsters:users}))
-    .catch(err => console.log(err))
+  async componentDidMount(){
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json();
+        this.setState({monsters: data})
+    }catch(error){
+      console.log("Whoops!", error)
+    }
   }
 
   handleChange = e => {

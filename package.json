@@ -1,10 +1,9 @@
 {
   "name": "monsters-rolodex",
   "version": "0.1.0",
-  "homepage": "https://jthinlay.github.io/monster-rolodex",
+  "homepage": "https://jthinlay.github.io/monsters-rolodex",
   "private": true,
   "dependencies": {
-    "gh-pages": "^2.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
@@ -14,7 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -31,5 +30,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
